@@ -1,0 +1,255 @@
+/* SKY CNC Custom Styles */
+/* Additional styles to complement Tailwind CSS */
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2d2d2d;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #DC2626;
+}
+
+/* Selection color */
+::selection {
+    background: rgba(220, 38, 38, 0.3);
+    color: white;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(220, 38, 38, 0.5);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Hero section gradient overlay */
+.hero-gradient {
+    background: linear-gradient(
+        135deg,
+        rgba(17, 17, 17, 0.95) 0%,
+        rgba(26, 26, 26, 0.9) 50%,
+        rgba(17, 17, 17, 0.95) 100%
+    );
+}
+
+/* Card hover effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Button hover effect */
+.btn-primary {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: left 0.5s ease;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Form input focus styles */
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #DC2626 !important;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+/* File upload drop zone */
+.file-drop-zone {
+    transition: all 0.3s ease;
+}
+
+.file-drop-zone:hover {
+    border-color: #DC2626;
+    background-color: rgba(220, 38, 38, 0.05);
+}
+
+.file-drop-zone.dragover {
+    border-color: #DC2626;
+    background-color: rgba(220, 38, 38, 0.1);
+}
+
+/* Navigation link underline effect */
+nav a:not(.bg-primary) {
+    position: relative;
+}
+
+nav a:not(.bg-primary)::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #DC2626;
+    transition: width 0.3s ease;
+}
+
+nav a:not(.bg-primary):hover::after {
+    width: 100%;
+}
+
+/* Stats counter animation placeholder */
+.stat-number {
+    display: inline-block;
+}
+
+/* Project card image overlay */
+.project-card-overlay {
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(17, 17, 17, 0.8) 100%
+    );
+}
+
+/* Material card glow effect */
+.material-card:hover {
+    box-shadow: 0 0 30px rgba(220, 38, 38, 0.15);
+}
+
+/* Footer social icons */
+.social-icon {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+}
+
+/* Loading spinner (for form submission) */
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid transparent;
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .capability-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Print styles */
+@media print {
+    header,
+    footer,
+    #quote {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .text-gray-400 {
+        color: #d1d5db;
+    }
+    
+    .border-dark-lighter {
+        border-color: #4b5563;
+    }
+}
+
+/* Focus visible styles for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid #DC2626;
+    outline-offset: 2px;
+}
