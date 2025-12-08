@@ -80,10 +80,10 @@
 
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 bg-gradient-to-br from-dark via-dark-light to-dark"></div>
-        <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot; fill-opacity=&quot;0.1&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="assets/images/hero-bg.jpg" alt="CNC Machining" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark via-dark/90 to-dark/70"></div>
         </div>
         
         <div class="container mx-auto px-4 relative z-10">
@@ -178,102 +178,162 @@
                 </div>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Machinery -->
-                <div class="bg-dark rounded-2xl p-8 border border-dark-lighter hover:border-primary/50 transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white">Machinery</h3>
+            <!-- Capability Cards with Images -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+                <!-- CNC Milling -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-dark-lighter hover:border-primary/50 transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/images/capabilities/cnc-milling.jpg" alt="CNC Milling" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <div>
-                                <span class="text-white font-semibold">VMC (Vertical Machining Center)</span>
-                                <p class="text-gray-400 text-sm">800mm X-Travel for large component machining</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <div>
-                                <span class="text-white font-semibold">3x CNC Turning Centers</span>
-                                <p class="text-gray-400 text-sm">Max Diameter 350mm capacity</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <div>
-                                <span class="text-white font-semibold">Precision Grinding</span>
-                                <p class="text-gray-400 text-sm">Surface & cylindrical grinding capabilities</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <div>
-                                <span class="text-white font-semibold">Wire EDM</span>
-                                <p class="text-gray-400 text-sm">Complex profile cutting with high precision</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                            </svg>
-                            <div>
-                                <span class="text-white font-semibold">Quality Inspection</span>
-                                <p class="text-gray-400 text-sm">CMM & advanced metrology equipment</p>
-                            </div>
-                        </li>
-                    </ul>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">CNC Milling</h3>
+                        <p class="text-gray-400 text-sm">VMC with 800mm X-Travel for large component machining with exceptional precision.</p>
+                    </div>
                 </div>
                 
-                <!-- Material Expertise -->
-                <div class="bg-dark rounded-2xl p-8 border border-dark-lighter hover:border-primary/50 transition-all duration-300">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
-                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white">Material Expertise</h3>
+                <!-- CNC Turning -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-dark-lighter hover:border-primary/50 transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/images/capabilities/cnc-turning.jpg" alt="CNC Turning" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300">
-                            <div class="text-primary font-bold text-lg mb-1">Titanium</div>
-                            <p class="text-gray-400 text-sm">Aerospace & Medical grades</p>
-                        </div>
-                        <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300">
-                            <div class="text-primary font-bold text-lg mb-1">D2 Steel</div>
-                            <p class="text-gray-400 text-sm">Tool & die applications</p>
-                        </div>
-                        <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300">
-                            <div class="text-primary font-bold text-lg mb-1">Stainless Steel</div>
-                            <p class="text-gray-400 text-sm">304, 316, 17-4 PH grades</p>
-                        </div>
-                        <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300">
-                            <div class="text-primary font-bold text-lg mb-1">Aluminium</div>
-                            <p class="text-gray-400 text-sm">6061, 7075 & more</p>
-                        </div>
-                        <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300">
-                            <div class="text-primary font-bold text-lg mb-1">Brass</div>
-                            <p class="text-gray-400 text-sm">Precision components</p>
-                        </div>
-                        <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300">
-                            <div class="text-primary font-bold text-lg mb-1">Exotic Alloys</div>
-                            <p class="text-gray-400 text-sm">Inconel, Hastelloy</p>
-                        </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">CNC Turning</h3>
+                        <p class="text-gray-400 text-sm">3x CNC Turning Centers with max diameter 350mm capacity for cylindrical parts.</p>
+                    </div>
+                </div>
+                
+                <!-- 5-Axis Machining -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-dark-lighter hover:border-primary/50 transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/images/capabilities/5-axis-machining.jpg" alt="5-Axis Machining" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">5-Axis Machining</h3>
+                        <p class="text-gray-400 text-sm">Complex geometries and aerospace-grade components with multi-axis precision.</p>
+                    </div>
+                </div>
+                
+                <!-- Precision Grinding -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-dark-lighter hover:border-primary/50 transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/images/capabilities/grinding.jpg" alt="Precision Grinding" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Precision Grinding</h3>
+                        <p class="text-gray-400 text-sm">Surface & cylindrical grinding for mirror finishes and tight tolerances.</p>
+                    </div>
+                </div>
+                
+                <!-- Wire EDM -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-dark-lighter hover:border-primary/50 transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/images/capabilities/edm.jpg" alt="Wire EDM" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Wire EDM</h3>
+                        <p class="text-gray-400 text-sm">Complex profile cutting for intricate shapes and hardened materials.</p>
+                    </div>
+                </div>
+                
+                <!-- Quality Inspection -->
+                <div class="bg-dark rounded-2xl overflow-hidden border border-dark-lighter hover:border-primary/50 transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="assets/images/capabilities/quality-inspection.jpg" alt="Quality Inspection" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Quality Inspection</h3>
+                        <p class="text-gray-400 text-sm">CMM & advanced metrology equipment ensuring ±3 micron accuracy.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Material Expertise -->
+            <div class="bg-dark rounded-2xl p-8 border border-dark-lighter">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white">Material Expertise</h3>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300 text-center">
+                        <div class="text-primary font-bold text-lg mb-1">Titanium</div>
+                        <p class="text-gray-400 text-sm">Aerospace & Medical</p>
+                    </div>
+                    <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300 text-center">
+                        <div class="text-primary font-bold text-lg mb-1">D2 Steel</div>
+                        <p class="text-gray-400 text-sm">Tool & Die</p>
+                    </div>
+                    <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300 text-center">
+                        <div class="text-primary font-bold text-lg mb-1">Stainless</div>
+                        <p class="text-gray-400 text-sm">304, 316, 17-4 PH</p>
+                    </div>
+                    <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300 text-center">
+                        <div class="text-primary font-bold text-lg mb-1">Aluminium</div>
+                        <p class="text-gray-400 text-sm">6061, 7075</p>
+                    </div>
+                    <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300 text-center">
+                        <div class="text-primary font-bold text-lg mb-1">Brass</div>
+                        <p class="text-gray-400 text-sm">Precision Parts</p>
+                    </div>
+                    <div class="bg-dark-light rounded-xl p-4 border border-dark-lighter hover:border-primary/30 transition-all duration-300 text-center">
+                        <div class="text-primary font-bold text-lg mb-1">Exotic Alloys</div>
+                        <p class="text-gray-400 text-sm">Inconel, Hastelloy</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Industries Section -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-primary font-semibold tracking-wider uppercase">Industries We Serve</span>
+                <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6">Trusted Across Sectors</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Delivering precision components to the world's most demanding industries.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Aerospace -->
+                <div class="group relative rounded-2xl overflow-hidden">
+                    <img src="assets/images/industries/industry-aerospace.jpg" alt="Aerospace Industry" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Aerospace</h3>
+                        <p class="text-gray-300 text-sm">Turbine blades, structural components</p>
+                    </div>
+                </div>
+                
+                <!-- Oil & Gas -->
+                <div class="group relative rounded-2xl overflow-hidden">
+                    <img src="assets/images/industries/industry-oil-gas.jpg" alt="Oil & Gas Industry" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Oil & Gas</h3>
+                        <p class="text-gray-300 text-sm">Valves, drilling components</p>
+                    </div>
+                </div>
+                
+                <!-- Automotive -->
+                <div class="group relative rounded-2xl overflow-hidden">
+                    <img src="assets/images/industries/industry-automotive.jpg" alt="Automotive Industry" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Automotive</h3>
+                        <p class="text-gray-300 text-sm">Engine parts, transmission</p>
+                    </div>
+                </div>
+                
+                <!-- Medical -->
+                <div class="group relative rounded-2xl overflow-hidden">
+                    <img src="assets/images/industries/industry-medical.jpg" alt="Medical Industry" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/50 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 class="text-xl font-bold text-white mb-1">Medical</h3>
+                        <p class="text-gray-300 text-sm">Surgical instruments, implants</p>
                     </div>
                 </div>
             </div>
@@ -292,12 +352,9 @@
             <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                 <!-- Case Study 1 -->
                 <div class="bg-dark-light rounded-2xl overflow-hidden border border-dark-lighter hover:border-primary/50 transition-all duration-300 group">
-                    <div class="h-48 bg-gradient-to-br from-primary/20 to-dark relative overflow-hidden">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-primary/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="assets/images/projects/project-dubai.jpg" alt="Dubai UAE Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
                         <div class="absolute top-4 left-4">
                             <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">CASE STUDY</span>
                         </div>
@@ -324,12 +381,9 @@
                 
                 <!-- Case Study 2 -->
                 <div class="bg-dark-light rounded-2xl overflow-hidden border border-dark-lighter hover:border-primary/50 transition-all duration-300 group">
-                    <div class="h-48 bg-gradient-to-br from-primary/20 to-dark relative overflow-hidden">
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <svg class="w-24 h-24 text-primary/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"></path>
-                            </svg>
-                        </div>
+                    <div class="h-48 relative overflow-hidden">
+                        <img src="assets/images/projects/project-england.jpg" alt="England UK Project" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/80 to-transparent"></div>
                         <div class="absolute top-4 left-4">
                             <span class="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full">CASE STUDY</span>
                         </div>
@@ -351,6 +405,52 @@
                             <span class="bg-dark text-gray-300 text-xs px-3 py-1 rounded-full border border-dark-lighter">D2 Tool Steel</span>
                             <span class="bg-dark text-gray-300 text-xs px-3 py-1 rounded-full border border-dark-lighter">Heat Treated</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workshop Section -->
+    <section class="py-20 bg-dark">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-primary font-semibold tracking-wider uppercase">Our Facility</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mt-4 mb-6">State-of-the-Art Workshop</h2>
+                    <p class="text-gray-400 mb-6">Our MSME ZED certified facility in Coimbatore, India houses the latest CNC machinery and quality control equipment. We operate 24/7 to meet global demand while maintaining the highest standards of precision manufacturing.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Climate-controlled machining environment
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Dedicated quality inspection lab
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            24/7 production capability
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-300">
+                            <svg class="w-5 h-5 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Global shipping & logistics support
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                    <img src="assets/images/workshop.jpg" alt="SKY CNC Workshop" class="rounded-2xl shadow-2xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-primary text-white p-6 rounded-xl shadow-lg">
+                        <div class="text-3xl font-bold">15+</div>
+                        <div class="text-sm">Years Experience</div>
                     </div>
                 </div>
             </div>
