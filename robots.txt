@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://eshdada.online/sitemap.xml
+Sitemap: https://skycnc.in/sitemap.xml
 
 # Disallow admin/private paths (none currently)
 # Disallow: /admin/
