@@ -704,3 +704,32 @@ select {
 .text-red-400 {
     color: #f87171;
 }
+
+/* ============================================
+   WHATSAPP BUTTON
+   ============================================ */
+.bg-green-500 {
+    background-color: #25D366;
+}
+.bg-green-500:hover,
+.hover\:bg-green-600:hover {
+    background-color: #128C7E;
+}
+.bottom-6 {
+    bottom: 1.5rem;
+}
+.right-6 {
+    right: 1.5rem;
+}
+.p-4 {
+    padding: 1rem;
+}
+.w-7 {
+    width: 1.75rem;
+}
+.h-7 {
+    height: 1.75rem;
+}
+.hover\:scale-110:hover {
+    transform: scale(1.1);
+}
