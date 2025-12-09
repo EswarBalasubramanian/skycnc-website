@@ -144,7 +144,7 @@
                 </h1>
                 
                 <p class="text-xl md:text-2xl text-gray-400 mb-8 max-w-3xl mx-auto">
-                    SKY CNC: Global Capacity. Proven Quality. Up to <span class="text-primary font-bold">±3 Micron Tolerance</span>.
+                    Global Capacity. Proven Quality. Up to <span class="text-primary font-bold">±3 Micron Tolerance</span>.
                 </p>
                 
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -179,11 +179,11 @@
         </div>
         
         <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <!-- <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
             <svg class="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
             </svg>
-        </div>
+        </div> -->
     </section>
 
     <!-- Capabilities Section -->
@@ -552,7 +552,10 @@
                     <p class="text-gray-400 max-w-2xl mx-auto">Share your project requirements and we'll provide a detailed quote within 24 hours.</p>
                 </div>
                 
-                <form id="rfq-form" class="bg-dark rounded-2xl p-8 border border-dark-lighter">
+                <form id="rfq-form" action="https://usebasin.com/f/cdd43f399627" method="POST" enctype="multipart/form-data" class="bg-dark rounded-2xl p-8 border border-dark-lighter">
+                    <!-- Honeypot field for spam protection (hidden from humans) -->
+                    <input type="hidden" name="_gotcha" value="">
+                    
                     <div class="grid md:grid-cols-2 gap-6">
                         <!-- Name -->
                         <div>
@@ -623,14 +626,14 @@
                         <div>
                             <label for="cad-file" class="block text-gray-300 font-medium mb-2">Upload CAD File</label>
                             <div class="relative">
-                                <input type="file" id="cad-file" name="cad-file" accept=".step,.stp,.iges,.igs,.dwg,.dxf,.pdf"
+                                <input type="file" id="cad-file" name="cad-file" accept=".step,.stp,.iges,.igs,.dwg,.dxf,.pdf,.x_t,.x_b,.sat"
                                     class="hidden">
                                 <label for="cad-file" 
                                     class="flex items-center justify-center w-full bg-dark-light border-2 border-dashed border-dark-lighter rounded-lg px-4 py-3 text-gray-400 hover:border-primary hover:text-primary cursor-pointer transition-colors">
                                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"></path>
                                     </svg>
-                                    <span id="file-name">STEP, IGES, DWG, DXF, PDF</span>
+                                    <span id="file-name">STEP, IGES, DWG, DXF, PDF (max 10MB)</span>
                                 </label>
                             </div>
                         </div>
@@ -655,6 +658,9 @@
                     <p class="text-gray-500 text-sm text-center mt-4">
                         We typically respond within 24 hours. All information is kept confidential.
                     </p>
+                    
+                    <!-- Success/Error Messages -->
+                    <div id="form-status" class="hidden mt-4 p-4 rounded-lg text-center"></div>
                 </form>
             </div>
         </div>
@@ -718,7 +724,7 @@
                             <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
-                            <a href="mailto:skyindustrialengineers@gmail.com" class="text-gray-400 hover:text-primary transition-colors text-sm">skyindustrialengineers@gmail.com</a>
+                            <a href="mailto:skycnc2018@gmail.com" class="text-gray-400 hover:text-primary transition-colors text-sm">skyindustrialengineers@gmail.com</a>
                         </li>
                     </ul>
                 </div>
