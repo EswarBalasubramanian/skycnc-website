@@ -1,0 +1,19 @@
+{
+  "name": "skycnc-website",
+  "version": "1.0.0",
+  "description": "This repository hosts the static brochure website for SKY CNC.",
+  "main": "script.js",
+  "scripts": {
+    "minify:js": "terser script.js -c -m -o script.min.js",
+    "minify:css": "cleancss -o style.min.css style.css",
+    "minify": "npm run minify:js && npm run minify:css",
+    "build": "npm run minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "terser": "^5.44.1"
+  }
+}
